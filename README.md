@@ -11,4 +11,9 @@ Library Management System built with Node.js and Express, using an in-memory arr
 ## API Endpoints
 - POST /api/books : add a book
 - GET /api/books : get all books
+- GET /api/books/search?title= : search books by title (case-insensitive)
 - GET /api/books/:id : get one book
+- PUT /api/books/:id : update book details (id cannot be changed)
+- DELETE /api/books/:id : delete a book (blocked if copies are issued)
+- POST /api/books/:id/issue : issue a book (decreases available copies)
+- POST /api/books/:id/return : return a book (increases available copies)
